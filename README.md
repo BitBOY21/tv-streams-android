@@ -40,10 +40,12 @@ You can easily change the list of TV channels used by the app.
        )
    )
    
-Notes:
-id must be unique and simple (no spaces) because it is used in the navigation route.
-name is the label shown in the channel list.
-url must be a valid HLS .m3u8 stream URL.
-After editing, rebuild and run the app in Android Studio.
+**Notes**
+
+- `id` must be **unique** and simple (no spaces), because it is used in the navigation route.
+- `name` is the label shown in the channel list UI.
+- `url` must be a valid HLS `.m3u8` stream URL.
+- After editing, rebuild and run the app from Android Studio.
+
 
 
