@@ -23,12 +23,25 @@ Simple Android app for watching live TV streams (HLS) using **Kotlin**, **Jetpac
   - `ui/screens/` – `ChannelListScreen`, `PlayerScreen`
   - `ui/TvStreamsApp.kt` – navigation graph
 
-## Screenshots
+## Customize Channels
 
-> _TODO: add emulator/phone screenshots here_
+You can easily change the list of TV channels used by the app.
 
-```text
-Channel list screen
-Player screen – portrait
-Player screen – fullscreen
+1. Open `model/ChannelRepository.kt`.
+2. Edit the `channels` list and add/remove `Channel` items.  
+   Example:
 
+   ```kotlin
+   val channels: List<Channel> = listOf(
+       Channel(
+           id = "____",
+           name = "____",
+           url = "_____"
+       )
+   )
+   
+Notes:
+id must be unique and simple (no spaces) because it is used in the navigation route.
+name is the label shown in the channel list.
+url must be a valid HLS .m3u8 stream URL.
+After editing, rebuild and run the app in Android Studio.
